@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+main>.container {
+    padding: 60px 15px 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    size: 1rem;
+    /* background-color: #FFF; */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    /* text-decoration: underline; */
+    font-weight: bold;
+    /* color: orangered; */
+}
+
+.info-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.box_shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lbl_required {
+    color: red;
+    font-weight: bold;
+}
+
+.cookie-disclaimer {
+    background: #000000;
+    color: #FFF;
+    opacity: 0.8;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    height: 150px;
+    position: fixed;
+}
+
+.cookie-disclaimer .container {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cookie-disclaimer .cookie-close {
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cookie-disclaimer a {
+    color: orange;
+}
+
+.cookie-disclaimer a:hover {
+    color: greenyellow;
+}
