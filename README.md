@@ -27,4 +27,3 @@ on-off match result report for shooter function
 
 fix authentication level form
 fix 2 SO for Stat
-# idpasoth.com
