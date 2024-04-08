@@ -7,13 +7,19 @@ $modal_script = "";
 
 $sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND so_status = 'enable' AND so_level = 'IPOC' ORDER BY so_firstname_en;";
 $member_ipoc = $fnc->get_db_array($sql)[0];
-$sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_level = 'CSO' ORDER BY so_firstname_en;";
+
+// $sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_level = 'CSO' ORDER BY so_firstname_en;";
+$sql = "SELECT * FROM so_member WHERE YEAR(so_idpa_expire) >= '" . (date("Y") - 1) . "' AND so_idpa_id IS NOT NULL AND so_idpa_id != '' AND so_status = 'enable' AND so_available = 'online' AND so_level = 'CSO';";
 $member_cso = $fnc->get_db_array($sql);
-$sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_level = 'SO' ORDER BY so_firstname_en;";
+
+// $sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_level = 'SO' ORDER BY so_firstname_en;";
+$sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= '" . (date("Y") - 1) . "' AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_available = 'online' AND so_level = 'SO' ORDER BY so_firstname_en;";
 // die ($sql . "<br><br>");
 $member_so = $fnc->get_db_array($sql);
-$sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_level <> 'IPOC' AND so_level <> 'CSO' AND so_level <> 'SO' ORDER BY so_firstname_en;";
+
+$sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_available = 'online' AND so_level <> 'IPOC' AND so_level <> 'CSO' AND so_level <> 'SO' ORDER BY so_firstname_en;";
 $member_trainee = $fnc->get_db_array($sql);
+
 $sql = "SELECT * FROM v_on_duty where Year(match_begin) >= " . (date("Y") - 1) . ";";
 // $sql = "SELECT * FROM v_on_duty;";
 $member_on_duty = $fnc->get_db_array($sql);
