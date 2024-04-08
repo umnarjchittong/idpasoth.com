@@ -9,7 +9,7 @@ $sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1
 $member_ipoc = $fnc->get_db_array($sql)[0];
 
 // $sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_level = 'CSO' ORDER BY so_firstname_en;";
-$sql = "SELECT * FROM so_member WHERE YEAR(so_idpa_expire) >= '" . (date("Y") - 1) . "' AND so_idpa_id IS NOT NULL AND so_idpa_id != '' AND so_status = 'enable' AND so_available = 'online' AND so_level = 'CSO';";
+$sql = "SELECT * FROM so_member WHERE YEAR(so_idpa_expire) >= '" . (date("Y") - 1) . "' AND so_idpa_id IS NOT NULL AND so_idpa_id != '' AND so_status = 'enable' AND so_available = 'online' AND so_level = 'CSO' ORDER BY so_firstname_en;;";
 $member_cso = $fnc->get_db_array($sql);
 
 // $sql = "SELECT * FROM so_member WHERE Year(so_idpa_expire) >= " . (date("Y") - 1) . " AND so_idpa_id is not null AND so_idpa_id <> '' AND  so_status = 'enable' AND so_level = 'SO' ORDER BY so_firstname_en;";
@@ -70,6 +70,7 @@ $member_on_duty = $fnc->get_db_array($sql);
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#cso">CSO</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#so">SO</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#trainee">Trainee</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../sign/">Sign-in</a></li>
                 </ul>
             </div>
         </div>
